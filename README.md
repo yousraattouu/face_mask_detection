@@ -1,5 +1,6 @@
 # face_mask_detection
 Détection de Masque Facial avec CNN
+
 Ce projet vise à développer un système de détection de masque facial en utilisant des réseaux de neurones convolutionnels (CNN). L'objectif principal est d'identifier si une personne porte un masque facial ou non à partir d'une image capturée par une caméra ou une photo.
 
 Fonctionnalités clés:

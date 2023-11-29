@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Détection de Masque Facial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Détection de Masque Facial</h1>
+    <form action="/" method="post" enctype="multipart/form-data" style="text-align: center; margin-top: 20px;">
+        <label for="file">Choisissez une image :</label>
+        <input type="file" name="file" id="file" accept=".jpg, .jpeg, .png" required>
+        <br>
+        <input type="submit" value="Prédire">
+    </form>
+    <div id="result">
+        {% if result %}
+            {{ result }}
+        {% endif %}
+    </div>
+</body>
+</html>
