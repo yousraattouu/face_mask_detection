@@ -3,23 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel="stylesheet" href="static\style.css">
     <title>Détection de Masque Facial</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        #result {
-            text-align: center;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
     <h1>Détection de Masque Facial</h1>
@@ -29,10 +14,19 @@
         <br>
         <input type="submit" value="Prédire">
     </form>
-    <div id="result">
+
+    <div id="image-preview" style="text-align: center; margin-top: 20px;">
+        {% if uploaded_file %}
+            <p>Image téléchargée :</p>
+            <img src="{{ uploaded_file }}" alt="Image téléchargée">
+        {% endif %}
+    </div>
+
+    <div id="result" style="text-align: center; margin-top: 20px; font-weight: bold;">
         {% if result %}
             {{ result }}
         {% endif %}
     </div>
 </body>
 </html>
+
